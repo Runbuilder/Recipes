@@ -19,8 +19,7 @@ function previewImage(event) {
 function generateContent() {
   document.getElementById('response').innerHTML = '';
   const imageInput = document.getElementById('imageInput');
-  const textInput = document.getElementById('textInput').value;
-
+  
   if (imageInput.files.length === 0) {
     Swal.fire({
       title: '경고',
@@ -36,7 +35,6 @@ function generateContent() {
 
   const formData = new FormData();
   formData.append('image', imageInput.files[0]);
-  formData.append('text', textInput); // 텍스트 데이터 추가
 
   const jcookUrl = 'https://port-0-jcook-9zxht12blq81t0ot.sel4.cloudtype.app/generate'
   fetch(jcookUrl, {
