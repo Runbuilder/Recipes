@@ -36,7 +36,7 @@ function generateContent() {
   const formData = new FormData();
   formData.append('image', imageInput.files[0]);
 
-  const jcookUrl = 'https://port-0-jcook-9zxht12blq81t0ot.sel4.cloudtype.app/generate'
+  const jcookUrl = 'https://port-0-recipeserver-9zxht12blq81t0ot.sel4.cloudtype.app/generate'
   fetch(jcookUrl, {
     method: 'POST',
     body: formData
